@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+
+	<style>
+		body {
+			background: url(cinema.jpg)no-repeat;
+			background-size: cover;
+			color: #fefeff;
+		}
+		.reset {
+            color: white;
+            height: 450px;
+            width: 400px;
+            background: black;
+            opacity: 0.8;
+            position: absolute;
+            top: 15%;
+            left: 35%;
+            padding: 9px;
+            
+        }
+		table,
+		tr,
+		td {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+		}
+
+		#result {
+			font-weight: bold;
+			color: #000000;
+		}
+
+		h1 {
+			color: #fbfbff;
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+		}
+		
+	</style>
+	
+	<form onsubmit="validate()" name="book" action="payment.html">
+		
+		<center>
+			<h1>BOOK A SHOW - TICKET BOOKING</h1>
+			<div class="reset">
+			<table>
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name" placeholder="Enter the name" required></td>
+
+				</tr><br><br><br>
+				<td style="padding:7px"></td>
+				<tr>
+					<td>Phone no</td>
+					<td> <input type="tel" name="phone" placeholder="Enter Mobile # here" maxlength="10" pattern="[0-9]+" required></td>
+				</tr>
+				<td style="padding:7px"></td>
+				<tr>
+					<td>City</td>
+					<td><input type="text" list="city" name="city"  required>
+						</td>
+				</tr>
+				
+				
+				<td style="padding:7px"></td>
+				<tr>
+					<td>No of tickets </td>
+					<td><input type="number" name="tickets" id="tickets" min="1" max="50"></td>
+				</tr>
+			
+				
+				<td style="padding:7px"></td>
+				<tr>
+					<td>Class</td>
+					<td><input type="text" list="cls" name="class"  id="class"  required>
+						<datalist id="cls">
+                          <option value="First"></option>
+                           <option value="Second"></option>
+						</datalist>
+						</td>
+				</tr>
+				<td style="padding:7px"></td>
+				
+			
+				<tr>
+					<td>Show date</td>
+					<td><input type="date" name="showdate"></td>
+				</tr>
+				<td style="padding:7px"></td>
+				<tr>
+					<td>
+						Show Time
+					</td>
+					<td>
+						<input type="text" list="time" name="show time" autocomplete="on" placeholder="Choose time"
+							required>
+						<datalist id="time">
+							<option value="08.30"></option>
+							<option value="11.00"></option>
+							<option value="2.30"></option>
+							<option value="6.00"></option>
+						</datalist>
+					</td>
+				</tr>
+
+				<td style="padding:10px"></td>
+
+				<tr>
+					
+					<td style="padding:15px"><button type="reset" name="reset">Reset</button>
+					<button class="buttons" type="reset" name="reset" onclick="document.location='movies.html'" >Cancel</button></td>
+					<td style="padding:5px"><button type="submit"   name="Book My Show">Book My Show</button></td>
+						
+				</tr>
+				<td style="padding:5px"></td>
+				<tr>
+					<td colspan="2">
+						<div id="result"></div>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+
+			<script >
+				
+				function validate() {
+					var x = document.getElementById("tickets").value;
+				    var date = document.book.showdate.value;
+					var currdate = new Date();
+					var curr = Date.parse(currdate.toString());
+					var bookdate = Date.parse(date);
+					var ticket= x * 200;
+				    var total =ticket;
+				
+					if (bookdate < curr) {
+						alert("Show date and time should be either current date or future date");
+						return false;
+					}
+
+					var wa = document.getElementById("result").innerHTML = "Your approximate ticket amount is " + total + " INR";
+					alert(wa);
+				
+				}
+			</script>
+		</center>
+	</form>
+</body>
+</html>

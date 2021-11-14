@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(cinema.jpg)no-repeat;
+}
+
+
+.selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selection select{
+    padding: 10px 20px;
+}
+.inputbox{
+    width: 200px;
+    height: 25px;
+}
+.date{
+    width: 100px;
+    height: 25px;
+}
+.buttons{
+    background-color: #e7e7e7;
+     color: rgb(0, 0, 0);
+     width: 90px;
+     height: 30px;
+     border-radius: 7px;
+     
+    }
+    .reset {
+        color: white;
+        height: 400px;
+        width: 700px;
+        background: black;
+        opacity: 0.8;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        padding: 9px;
+        margin-left: 100px;
+    }
+    table,
+    tr,
+    td {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    #result {
+        font-weight: bold;
+        color: #000000;
+    }
+
+    h1 {
+        color: #fbfbff;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }

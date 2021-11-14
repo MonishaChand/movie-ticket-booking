@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head><title>pay</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form onsubmit="validate()" name="book" action="movies.html">
+		
+		<center>
+			
+			<div class="reset">
+			<table>
+				<tr>
+					<center><h1>payment</h1></center>
+				</tr>
+				<tr>
+					<td>Name on the Card</td>
+					<td><input class="inputbox" type="text" name="name" placeholder="Enter the name" required></td>
+
+				</tr><br><br><br>
+				<td style="padding:7px"></td>
+				<tr>
+					<td>Card Number</td>
+					<td><input class="inputbox" type="tel" name="phone" placeholder="Enter Card Number" required></td>
+				</tr>
+				<td style="padding:7px"></td>
+
+				<tr>
+					<td>CCV</td>
+					<td><input class="inputbox" type="tel" name="phone"  maxlength="3"  placeholder="Enter CCV" required>
+					</td>
+				</tr>
+				<td style="padding:7px"></td>
+				<tr>
+					<td>Expiry Date</td>
+					<td><select class="date" name="months" id="months" required>
+						<option value="Jan">Jan</option>
+						<option value="Feb">Feb</option>
+						<option value="Mar">Mar</option>
+						<option value="Apr">Apr</option>
+						<option value="May">May</option>
+						<option value="Jun">Jun</option>
+						<option value="Jul">Jul</option>
+						<option value="Aug">Aug</option>
+						<option value="Sep">Sep</option>
+						<option value="Oct">Oct</option>
+						<option value="Nov">Nov</option>
+						<option value="Dec">Dec</option>
+					</select>
+					<select class="date" name="years" id="years" required>
+						<option value="2021">2021</option>
+						<option value="2022">2022</option>
+						<option value="2023">2023</option>
+						<option value="2024">2024</option>
+						<option value="2025">2025</option>
+						<option value="2026">2026</option>
+					</select></td>
+				</tr>
+				
+
+				<td style="padding:20px"></td>
+
+				<tr>
+					<td></td>
+					<td><button class="buttons" type="submit" name="Book My Show">Submit</button>
+			
+					<button class="buttons" type="reset" name="reset" onclick="document.location='movies.html'" >Cancel</button>
+				</td>
+					
+				</tr>
+				
+				
+
+			</table>
+		</div>
+		<script>
+            function validate(){
+                
+                var wa = "Ticket Booked Successfully! Thank you come again";
+                            alert(wa);
+                            window.location="movies.html";
+            }
+        </script>
+
+		</center>
+	</form>
+</body>
+</html>

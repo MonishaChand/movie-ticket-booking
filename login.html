@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head><title>online</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<style>
+		body {
+			background: url(cinema.jpg)no-repeat;
+			background-size: cover;
+			
+		}
+		.reset {
+            
+            height: 280px;
+            width: 400px;
+            background: black;
+            opacity: 0.9;
+            position: absolute;
+            top: 45%;
+            left: 35%;
+            padding: 9px;
+			margin-right: 25px;
+			margin-bottom: 100px;
+        }
+		table,
+		tr,
+		td {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+		}
+
+		h1 {
+			color: #faf6f6;
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+			letter-spacing: 9px;
+		}
+.buttons{
+    background-color: #e7e7e7;
+     color: rgb(0, 0, 0);
+    }
+	</style>
+	<form onsubmit="validate()" name="book" action="movies.html">
+		
+		<center>
+			<div class="reset">    
+			<table>
+				<tr>
+					<td><b style="color: blanchedalmond;">USER NAME</b></td>
+					<td><input type="text" name="name" placeholder="Enter the name " required></td>
+
+				</tr><br><br><br>
+				<td style="padding:15px"></td>
+				<tr>
+					<td><b style="color: blanchedalmond;">PASSWORD</b></td>
+					<td><input type="password" placeholder="enter password"  maxlength="6" id="myInput"> </td>
+				</tr>
+				<tr>
+                <td style="padding:6px"></td>
+                    <td> 
+						<input type="checkbox" onclick="myFunction()">Show Password
+                        
+                </td>
+				</tr>
+                <tr>
+                    <td style="padding:50px"></td>
+                    <td><button class="buttons" type="login" name="login">Login</button>
+                    	<button  class="buttons" type="reset" name="reset" >Clear</button></td>
+				<td style="padding:5px"></td>
+                </tr>
+			</table>
+            
+		</div>	
+		</center>
+	</form>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">My Show</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="sign.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          </ul>
+        </div>
+      </nav> <br><br><br><br><br>
+	  <h1><b>Ticket Booking</b></h1>
+	  <script>
+		function myFunction() {
+		  var x = document.getElementById("myInput");
+		  if (x.type === "password")
+		   {
+			x.type = "text";
+		  } else {
+			x.type = "password";
+		  }
+		}
+		</script>
+		
+</body>
+</html>
